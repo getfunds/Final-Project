@@ -33,12 +33,14 @@ pub fn process_instruction(
             title,
             rating,
             description,
-        } => add_review(program_id, accounts, title, rating, description),
+            location,
+        } => add_review(program_id, accounts, title, rating, description, location),
         ReviewInstruction::UpdateReview {
             title,
             rating,
             description,
-        } => update_review(program_id, accounts, title, rating, description),
+            location,
+        } => update_review(program_id, accounts, title, rating, description, location),
     }
 }
 
@@ -48,11 +50,13 @@ pub fn add_review(
     title: String,
     rating: u8,
     description: String,
+    location: String,
 ) -> ProgramResult {
     msg!("Adding  review...");
     msg!("Title: {}", title);
     msg!("Rating: {}", rating);
     msg!("Description: {}", description);
+    msg!("Location: {}", location);
 
     let account_info_iter = &mut accounts.iter();
 
@@ -135,6 +139,7 @@ pub fn update_review(
     _title: String,
     rating: u8,
     description: String,
+    location: String,
 ) -> ProgramResult {
     msg!("Updating  review...");
 
