@@ -35,18 +35,24 @@ Follow these steps to set up the project locally
    cd Final-Project
 3. Install required npm packages:
    ```bash
-   npm run dev
+   npm install
    # or
-   yarn dev
+   yarn install
    # or
-   pnpm dev
+   pnpm install
    # or
-   bun dev
+   bun install
    ```
    ## Usage
    1. Start the development server:
       ```bash
       npm run dev
+      # or
+      yarn dev
+      # or
+      pnpm dev
+      # or
+      bun dev
     2. Open your web browser and navigate to http://localhost:3000 to access the DApp.
     3. Connect your Solana wallet (e.g., Phantom , SolFlare) to the DApp.
     4. Add or update reviews for restaurants and Browse reviews by others
